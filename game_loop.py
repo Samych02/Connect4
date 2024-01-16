@@ -17,6 +17,12 @@ def loop(GAME_DIFFICULTY):
     turn = "HUMAN" if human_piece == 1 else "AI"
     posx = 4 + RADIUS
 
+    # hotfix to draw the first dropped piece if the first to play is the AI
+    if turn == "AI":
+        mousepos = pygame.mouse.get_pos()
+        pygame.mouse.set_pos(mousepos[0] + 1, mousepos[1])
+        
+
     # set screen title
     pygame.display.set_caption("Connect 4")
 
@@ -44,6 +50,11 @@ def loop(GAME_DIFFICULTY):
             ai_piece = tmp[1][1]
             turn = "HUMAN" if human_piece == 1 else "AI"
             posx = 4 + RADIUS
+
+            # hotfix to draw the first dropped piece if the first to play is the AI
+            if turn == "AI":
+                mousepos = pygame.mouse.get_pos()
+                pygame.mouse.set_pos(mousepos[0] + 1, mousepos[1])
 
         for event in pygame.event.get():
 
