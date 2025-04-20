@@ -13,7 +13,7 @@ The game features three difficulty modes against the AI. The AI is implemented u
 
 ## Installation
 
-Just make sure you have pygame library installed then run connect4.py
+Just make sure you have numpy and pygame library installed then run connect4.py
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
